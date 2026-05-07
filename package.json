@@ -9,6 +9,11 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "tauri:build:exe": "tauri build --no-bundle",
+    "tauri:build:msi": "tauri build --bundles msi",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -26,6 +31,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
+    "@tauri-apps/cli": "^2.11.1",
     "@testing-library/jest-dom": "^6.6.0",
     "@types/node": "^22.16.5",
     "@types/react": "^18.3.23",

@@ -3,7 +3,7 @@ import { encrypt, decrypt } from "@/lib/crypto";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
-import { Lock, Unlock, Copy, Shield, ShieldCheck, KeyRound, ServerOff, FileKey } from "lucide-react";
+import { Lock, Unlock, Copy, ShieldCheck, KeyRound, ServerOff, FileKey } from "lucide-react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
 
@@ -84,10 +84,15 @@ const LabSection = () => {
           <div className="grid gap-8 sm:grid-cols-2 relative z-10">
             <div>
               <div className="flex items-center gap-2 mb-8 relative z-10">
-                <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
-                  <Shield className="w-4 h-4 text-primary animate-pulse-glow" />
+                <div className="w-8 h-8 rounded-lg bg-[#111827] border border-[#eB8236]/30 flex items-center justify-center shadow-[0_0_18px_rgba(235,130,54,0.18)]">
+                  <div className="relative h-[18px] w-[16px]" aria-hidden="true">
+                    <div className="absolute left-[3px] top-0 h-[10px] w-[10px] rounded-t-[7px] border-[3px] border-b-0 border-[#eB8236]" />
+                    <div className="absolute bottom-0 left-0 h-[11px] w-[16px] rounded-[3px] bg-[#eB8236]">
+                      <div className="absolute left-1/2 top-[3px] h-[5px] w-[3px] -translate-x-1/2 rounded-full bg-[#111827]" />
+                    </div>
+                  </div>
                 </div>
-                <span className="text-sm font-display font-bold tracking-tight">Maio Quantum Box</span>
+                <span className="text-sm font-display font-bold tracking-tight">&nbsp;&nbsp;Maio Quantum Box</span>
                 <span className="text-[9px] font-code tracking-widest uppercase text-muted-foreground/40 ml-auto">
                   AES-256-GCM / PBKDF2
                 </span>
